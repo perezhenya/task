@@ -2,6 +2,7 @@ let today = new Date();
 let thisMonth = today.getMonth();
 let thisYear = today.getFullYear();
 
+
 let months = [
     "Jan",
     "Feb",
@@ -58,8 +59,28 @@ function fillCalendar(month, year) {
 }
 
 
+var modal = document.getElementById('myModal');
+let tbl = document.getElementById("calendar-body");
+let myForm = document.getElementById('myInput')
+
+
+
+
+tbl.onclick = (event) => {
+    var target = event.target;
+    if(target.tagName !== 'TD') return;
+    modal.style.display = "block";
+};
+
+
+function send() {
+tbl.textContent = myForm.elements.msg.value;
+ 
+}
+console.log()
+
 function previous() {
-    thisYear = thisMonth === 0 ? thisYear : thisYear - 1;
+    thisYear = thisMonth === 0 ? thisYear : thisYear -1;
     thisMonth = thisMonth === 0 ? 11 : thisMonth - 1;
     fillCalendar(thisMonth, thisYear);
 }
@@ -69,3 +90,23 @@ function next() {
     thisMonth = (thisMonth + 1) % 12; 
     fillCalendar(thisMonth, thisYear); 
 }
+function thisDay() {
+    let thisYear = today.getFullYear();
+    let thisMonth = today.getMonth();
+    fillCalendar(thisMonth, thisYear);
+}
+
+// modal
+// var modal = document.querySelector('modal');
+// modal.style.display = "block";
+
+// var close = document.getElementsByClassName("close")[0];
+
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
+
+// close.onclick = function() {
+//     modal.style.display = "none";
+// }
+

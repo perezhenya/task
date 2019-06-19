@@ -34,12 +34,25 @@
                 </thead>
                 <tbody id="calendar-body"></tbody>
             </table>
-
 </div>
-
         </div>
-    </div>
+    </div> 
+    <!-- modal-->
 
+   <!-- <button id="myBtn" type="button" class="btn btn-primary">Open Modal</button> -->
+   <div class="modal" id="myModal">
+       <div class="modal-content">
+       <!-- <span class="close">&times;</span> -->
+       <form class="modal-body d-flex m-auto " id="myInput">
+      <input type="text" value="" name="msg" >
+      <input type="submit" class="btn btn-primary  w-5" onClick="send()"  value="Сохранить">
+      <input type="submit" class="btn btn-primary  w-5 " id="deleteButton" value="Отмена">
+       </form>
+     </div>
+   </div>
+   
+  
+      
     <script src="script.js"></script>
 </body>
 </html>
