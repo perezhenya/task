@@ -72,12 +72,12 @@ tbl.onclick = (event) => {
     modal.style.display = "block";
 };
 
-
+//отправка при клике
 function send() {
-tbl.textContent = myForm.elements.msg.value;
- 
+// tbl.textContent = myForm.elements.msg.value;
+ alert('I tried..(')
 }
-console.log()
+
 
 function previous() {
     thisYear = thisMonth === 0 ? thisYear : thisYear -1;
